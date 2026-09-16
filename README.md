@@ -25,7 +25,7 @@ This is the **Private Payroll / Splits** pattern: distribute and pool funds with
 
 ## Live Demo
 
-> **URL:** [VERCEL PENDING] — connect Lace or 1AM on Preprod, view live pot state, join a pot, pledge, and prove the pledge meets the minimum without revealing it.
+> **URL:** https://hushpot-app.vercel.app — connect Lace or 1AM on Preprod, view live pot state, join a pot, pledge, and prove the pledge meets the minimum without revealing it.
 
 Run locally:
 ```bash
