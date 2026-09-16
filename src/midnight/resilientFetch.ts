@@ -93,6 +93,16 @@ export async function chunkedFetch(
     }
     done = end + 1;
     onProgress?.(done, total);
+    // Reflect progress on the static boot screen (replaced once React mounts).
+    // deno-lint-ignore no-explicit-any
+    const boot = (window as any).__hushpotProgress;
+    if (typeof boot === 'function') {
+      try {
+        boot(done, total);
+      } catch {
+        /* boot screen is best-effort */
+      }
+    }
   }
   return out.buffer;
 }
