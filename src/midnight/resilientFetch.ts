@@ -155,3 +155,45 @@ export function patchWasmStreaming(): void {
     };
   }
 }
+
+/**
+ * Patch window.fetch so ANY plain GET of a .wasm URL is served from the
+ * chunked loader — the wallet SDK's ledger glue fetches its WASM with a bare
+ * fetch(url) and never touches the streaming APIs, so patching those alone
+ * leaves the biggest file on the most fragile path. Our own chunkedFetch
+ * calls always pass an init object (HEAD / Range) and bypass this wrapper.
+ */
+export function patchWasmFetch(): void {
+  if (typeof window === 'undefined' || !window.fetch) return;
+  const nativeFetch = window.fetch.bind(window);
+  // deno-lint-ignore no-explicit-any
+  (window as any).fetch = (
+    input: RequestInfo | URL,
+    init?: RequestInit,
+  ): Promise<Response> => {
+    // Pass through our own internals (HEAD probes and Range chunk reads)
+    // and anything with explicit init (API calls, POSTs…).
+    if (init && (init.method || init.headers)) {
+      return nativeFetch(input, init);
+    }
+    let url: string | null = null;
+    if (typeof input === 'string') url = input;
+    else if (input instanceof URL) url = input.toString();
+    else if (typeof Request !== 'undefined' && input instanceof Request) {
+      url = input.url;
+    }
+    if (url && url.split('?')[0].endsWith('.wasm')) {
+      return chunkedFetch(url).then(
+        (buf) =>
+          new Response(buf, {
+            status: 200,
+            headers: {
+              'content-type': 'application/wasm',
+              'content-length': String(buf.byteLength),
+            },
+          }),
+      );
+    }
+    return nativeFetch(input, init);
+  };
+}
