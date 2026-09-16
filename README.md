@@ -21,7 +21,7 @@ This is the **Private Payroll / Splits** pattern: distribute and pool funds with
 
 | Network | Address | Deploy Tx | Block |
 |---------|---------|-----------|-------|
-| Preprod | [DEPLOY PENDING] | — | — |
+| Preprod | `b6709e66086cfa77d4bd88b1b918d03e1c1dde2c4584cc4dda005389a95914a9` | `00f5ae4fcb7f063f9498d04a117a6f440849bbda94f63fa7c09ca6ddb875e001de` | 2,573,582 |
 
 ## Live Demo
 
