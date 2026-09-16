@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+deploy/node_modules/
+
+# build output
+dist/
+target/
+
+# secrets — funded wallet seeds NEVER get committed.
+# Copy deploy/.env.preprod.example to deploy/.env.preprod and set your seed.
+.env
+.env.*
+!deploy/.env.preprod.example
+
+# runtime wallet state (LevelDB private-state cache + file-backed tx history)
+deploy/midnight-level-db/
+deploy/midnight-level-db.stale-*/
+
+# deploy runtime artifacts (written by the deploy driver / supervisor)
+deploy/deployed-address.txt
+deploy/hushpot-state.json
+deploy/logs/
+logs/
+
+# misc
+*.log
+.DS_Store
+.vercel
