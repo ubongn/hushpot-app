@@ -33,6 +33,8 @@ import {
   type VerifierKey,
 } from '@midnight-ntwrk/midnight-js-types';
 
+import { chunkedFetch } from './resilientFetch';
+
 const ASSETS = {
   join: { zkir: joinZkir, prover: joinProver, verifier: joinVerifier },
   pledge: { zkir: pledgeZkir, prover: pledgeProver, verifier: pledgeVerifier },
@@ -64,11 +66,10 @@ const bytesCache = new Map<string, Uint8Array>();
 async function fetchAsset(url: string): Promise<Uint8Array> {
   const cached = bytesCache.get(url);
   if (cached) return cached;
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`Failed to load ZK artifact '${url}': HTTP ${res.status}`);
-  }
-  const bytes = new Uint8Array(await res.arrayBuffer());
+  // Prover keys are 2.8–5.2 MB: fetch via resumable chunks so a flaky
+  // network retries a 1 MiB slice instead of restarting the whole file.
+  const buffer = await chunkedFetch(url);
+  const bytes = new Uint8Array(buffer);
   bytesCache.set(url, bytes);
   return bytes;
 }
