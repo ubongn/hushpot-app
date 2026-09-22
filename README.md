@@ -86,7 +86,7 @@ npm test
 
 Live feedback from Preprod testers: [Google Sheet](https://docs.google.com/spreadsheets/d/1SiTdk2xr20rUbVqMZus1Bz4uZzLTgTtKvuOBbyaL96g/edit?usp=sharing)
 
-Submit your wallet address and feedback: [Join Form](https://forms.gle/B3wnhV4PgnZD2W9S6)
+Submit your wallet address and feedback: [Join Form](https://forms.gle/Adm6GkAVndXGMBth8)
 
 ## License
 
