@@ -11,7 +11,7 @@ Verified Preprod wallet addresses from users who tested HushPot on Midnight test
 3. Get tNIGHT from the [faucet](https://midnight-tmnight-preprod.nethermind.dev/)
 4. Visit [hushpot-app.vercel.app](https://hushpot-app.vercel.app)
 5. Connect wallet → Join a pot → Pledge → Prove
-6. Submit your wallet address via the [feedback form](https://forms.gle/B3wnhV4PgnZD2W9S6)
+6. Submit your wallet address via the [feedback form](https://forms.gle/Adm6GkAVndXGMBth8)
 
 ## Verified Users
 
