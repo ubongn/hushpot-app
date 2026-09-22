@@ -82,6 +82,12 @@ npm test
 
 51 tests: circuit semantics (19), compiled privacy surface (10), wallet-state persistence (22). CI runs install + build + tests on every push and PR.
 
+## User Feedback
+
+Live feedback from Preprod testers: [Google Sheet](https://docs.google.com/spreadsheets/d/1SiTdk2xr20rUbVqMZus1Bz4uZzLTgTtKvuOBbyaL96g/edit?usp=sharing)
+
+Submit your wallet address and feedback: [Join Form](https://forms.gle/B3wnhV4PgnZD2W9S6)
+
 ## License
 
 Apache-2.0
