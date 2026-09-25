@@ -4,7 +4,7 @@
 
 > Private group savings pots on Midnight — pledge amounts stay secret; the pot only proves you've met the minimum.
 
-**X (product):** https://x.com/hushpotapp · **Builder:** https://x.com/ubong_dev
+**X (product):** [@hushpotapp](https://x.com/hushpotapp) · **X (builder):** [@ubong_dev](https://x.com/ubong_dev) · **GitHub:** [ubongn/hushpot-app](https://github.com/ubongn/hushpot-app) · **Live:** [hushpot-app.vercel.app](https://hushpot-app.vercel.app)
 
 ## What This Is
 
@@ -82,11 +82,46 @@ npm test
 
 51 tests: circuit semantics (19), compiled privacy surface (10), wallet-state persistence (22). CI runs install + build + tests on every push and PR.
 
-## User Feedback
+## Social Media
 
-Live feedback from Preprod testers: [Google Sheet](https://docs.google.com/spreadsheets/d/1SiTdk2xr20rUbVqMZus1Bz4uZzLTgTtKvuOBbyaL96g/edit?usp=sharing)
+| Platform | Link |
+|---|---|
+| X (product) | [@hushpotapp](https://x.com/hushpotapp) |
+| X (builder) | [@ubong_dev](https://x.com/ubong_dev) |
+| GitHub | [ubongn/hushpot-app](https://github.com/ubongn/hushpot-app) |
+| Live Demo | [hushpot-app.vercel.app](https://hushpot-app.vercel.app) |
 
-Submit your wallet address and feedback: [Join Form](https://forms.gle/Adm6GkAVndXGMBth8)
+## Product Updates
+
+| Date | Post | Platform |
+|---|---|---|
+| 2026-09-16 | [HushPot launch announcement](https://x.com/hushpotapp/status/2100152601731834359) | X @hushpotapp |
+| 2026-09-22 | [Tester recruitment — 50 users needed](https://x.com/hushpotapp/status/2102343131706634578) | X @hushpotapp |
+
+## Level 5 — User Validation
+
+HushPot is collecting Preprod user feedback via a public [Google Form](https://forms.gle/B3wnhV4PgnZD2W9S6). Responses are exported to a [Google Sheet](https://docs.google.com/spreadsheets/d/1SiTdk2xr20rUbVqMZus1Bz4uZzLTgTtKvuOBbyaL96g/edit?usp=sharing) (public, view-only). See [docs/FEEDBACK.md](docs/FEEDBACK.md) for the full feedback log with "What We Heard" and "What We Changed" sections.
+
+### Users Onboarded
+
+| # | Name | Email | Wallet Address | Feedback Summary |
+|---|---|---|---|---|
+| 1 | *(Host / Deployer)* | ubongnt@gmail.com | *(deployer wallet)* | Host account |
+| *(Awaiting 50 Preprod users — form active, recruiting via X, WhatsApp, Discord)* | | | | |
+
+### Feedback Implementation
+
+| # | Name | Feedback Summary | Improvement Made | Commit |
+|---|---|---|---|---|
+| *(Awaiting first feedback cycle — changes will be linked to specific commits)* | | | | |
+
+### Improvement Summary
+
+*Improvements made based on user feedback. Full details in [docs/FEEDBACK.md](docs/FEEDBACK.md).*
+
+| Feedback Theme | Improvement | Commit | Date |
+|---|---|---|---|
+| *(Awaiting user feedback — changes will be documented here with commit links)* | | | |
 
 ## License
 
