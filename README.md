@@ -100,7 +100,7 @@ npm test
 
 ## Level 5 — User Validation
 
-HushPot is collecting Preprod user feedback via a public [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdI7_2soOa-ZC1lO_7Jc4KY-nQRe7Hg5B6DJnBQBi2MsQWKSQ/viewform?usp=sharing). Responses are exported to a [Google Sheet](https://docs.google.com/spreadsheets/d/1SiTdk2xr20rUbVqMZus1Bz4uZzLTgTtKvuOBbyaL96g/edit?usp=sharing) (public, view-only). See [docs/FEEDBACK.md](docs/FEEDBACK.md) for the full feedback log with "What We Heard" and "What We Changed" sections.
+HushPot is collecting Preprod user feedback via a public [Google Form](https://forms.gle/uyisPb6ucVZiwdeW7). Responses are exported to a [Google Sheet](https://docs.google.com/spreadsheets/d/1SiTdk2xr20rUbVqMZus1Bz4uZzLTgTtKvuOBbyaL96g/edit?usp=sharing) (public, view-only). See [docs/FEEDBACK.md](docs/FEEDBACK.md) for the full feedback log with "What We Heard" and "What We Changed" sections.
 
 ### Users Onboarded
 

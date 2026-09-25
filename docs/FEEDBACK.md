@@ -1,6 +1,6 @@
 # HushPot — User Feedback Log
 
-This document tracks user feedback collected via the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdI7_2soOa-ZC1lO_7Jc4KY-nQRe7Hg5B6DJnBQBi2MsQWKSQ/viewform?usp=sharing) and the changes made in response.
+This document tracks user feedback collected via the [Google Form](https://forms.gle/uyisPb6ucVZiwdeW7) and the changes made in response.
 
 **Feedback Sheet:** [Google Sheet (public)](https://docs.google.com/spreadsheets/d/1SiTdk2xr20rUbVqMZus1Bz4uZzLTgTtKvuOBbyaL96g/edit?usp=sharing)
 
