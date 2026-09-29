@@ -13,9 +13,13 @@ This document tracks user feedback collected via the [Google Form](https://forms
 | Theme | Count | Source |
 |---|---|---|
 | Privacy works as designed (pledge hidden on-chain) | 1 | Blingz Kim |
-| Wallet connect + prove flow smooth, no major bugs | 1 | Blingz Kim |
+| Wallet connect + prove flow smooth, no major bugs | 2 | Blingz Kim, Test App |
 | Want pledge history / transaction dashboard | 1 | Blingz Kim |
 | Want clearer status indicators during prove step | 1 | Blingz Kim |
+| ZK proof step works perfectly | 1 | Test App |
+| Want notifications for pot deadlines | 1 | Test App |
+| Want multi-pot support | 1 | Test App |
+| Want live pot balance / progress tracker | 1 | Test App |
 
 ### Raw Feedback — User #1
 
@@ -28,6 +32,17 @@ This document tracks user feedback collected via the [Google Form](https://forms
 - **Improvement:** "Add a pledge history dashboard and clearer status indicators during the prove step."
 - **Missing feature:** "A transaction/pledge history view so testers can see past pledges and their status."
 
+### Raw Feedback — User #2
+
+- **Name:** Test App
+- **Date:** 2026-09-29
+- **Rating:** 5/5
+- **Best feature:** "The zero-knowledge proof step — it lets you prove your pledge without revealing the amount."
+- **Bugs:** "No bugs. Faucet, wallet connection, and the prove step all worked on the first try."
+- **Would recommend:** Yes
+- **Improvement:** "Add a notifications/reminder when a pot deadline is approaching, and support for multiple pots at once."
+- **Missing feature:** "A live pot balance / progress tracker so you can see how close a pot is to its goal."
+
 ---
 
 ## What We Changed
@@ -38,6 +53,9 @@ This document tracks user feedback collected via the [Google Form](https://forms
 |---|---|---|---|
 | Pledge history dashboard (Blingz Kim) | *(Planned)* | — | — |
 | Clearer status indicators during prove (Blingz Kim) | *(Planned)* | — | — |
+| Pot deadline notifications (Test App) | *(Planned)* | — | — |
+| Multi-pot support (Test App) | *(Planned)* | — | — |
+| Live pot balance tracker (Test App) | *(Planned)* | — | — |
 
 ---
 
