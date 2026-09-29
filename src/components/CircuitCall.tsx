@@ -5,7 +5,7 @@
 // moment it is committed; the proof step shows only validity + a tx id. What
 // the chain sees: a join anchor and a proof — never the amount.
 
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { MidnightConnection } from '../hooks/useMidnight';
 import { preloadCircuit } from '../midnight/zkAssets';
 import {
@@ -41,17 +41,35 @@ export default function CircuitCall({
   conn: MidnightConnection;
   facts: PotFactsData | null;
 }) {
-  const [amount, setAmount] = useState('');
+  const [amount, setAmount] = useState(() => sessionStorage.getItem('hp_amount') ?? '');
   const [threshold, setThreshold] = useState<string>('');
-  const [joined, setJoined] = useState(false);
-  const [pledged, setPledged] = useState(false);
-  const [joinStep, setJoinStep] = useState<StepState>(initialStep);
-  const [pledgeStep, setPledgeStep] = useState<StepState>(initialStep);
+  const [joined, setJoined] = useState(() => sessionStorage.getItem('hp_joined') === '1');
+  const [pledged, setPledged] = useState(() => sessionStorage.getItem('hp_pledged') === '1');
+  const [joinStep, setJoinStep] = useState<StepState>(() => {
+    const txId = sessionStorage.getItem('hp_join_tx');
+    return txId ? { phase: 'done', txId, error: null } : initialStep;
+  });
+  const [pledgeStep, setPledgeStep] = useState<StepState>(() => {
+    const txId = sessionStorage.getItem('hp_pledge_tx');
+    return txId ? { phase: 'done', txId, error: null } : initialStep;
+  });
   const [proofStep, setProofStep] = useState<StepState>(initialStep);
 
-  // Member identity for this session only.
+  // Member identity: persist in sessionStorage so page refresh doesn't lose state.
   const skRef = useRef<Uint8Array | null>(null);
   const amountRef = useRef<bigint | null>(null);
+
+  // Restore persisted state on mount
+  useEffect(() => {
+    const stored = sessionStorage.getItem('hp_sk');
+    if (stored && !skRef.current) {
+      skRef.current = Uint8Array.from(atob(stored), c => c.charCodeAt(0));
+    }
+    const storedAmt = sessionStorage.getItem('hp_amount_big');
+    if (storedAmt && !amountRef.current) {
+      amountRef.current = BigInt(storedAmt);
+    }
+  }, []);
   const ensureSecret = (): { sk: Uint8Array; amount: bigint } | null => {
     const amountBig =
       amountRef.current ?? (amount.trim() !== '' ? BigInt(amount.trim()) : null);
@@ -87,6 +105,12 @@ export default function CircuitCall({
       const { txId } = await joinPot(conn.providers, secret.sk, secret.amount);
       setJoinStep({ phase: 'done', txId, error: null });
       setJoined(true);
+      // Persist state across refreshes
+      sessionStorage.setItem('hp_joined', '1');
+      sessionStorage.setItem('hp_join_tx', txId);
+      sessionStorage.setItem('hp_sk', btoa(String.fromCharCode(...secret.sk)));
+      sessionStorage.setItem('hp_amount', amount);
+      sessionStorage.setItem('hp_amount_big', String(secret.amount));
     } catch (e) {
       setJoinStep({
         phase: 'error',
@@ -105,6 +129,9 @@ export default function CircuitCall({
       const { txId } = await pledgePot(conn.providers, secret.sk, secret.amount);
       setPledgeStep({ phase: 'done', txId, error: null });
       setPledged(true);
+      // Persist pledge state
+      sessionStorage.setItem('hp_pledged', '1');
+      sessionStorage.setItem('hp_pledge_tx', txId);
     } catch (e) {
       setPledgeStep({
         phase: 'error',
