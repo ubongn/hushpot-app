@@ -58,7 +58,7 @@ const envFile = `.env.${network}`;
 // ---------------------------------------------------------------------
 // Pot parameters (the demo story: 3 seats, min pledge 10, Alice 25 / Bob 40)
 // ---------------------------------------------------------------------
-const CAPACITY = 50n;
+const CAPACITY = 3n;
 const MIN_PLEDGE = 10n;
 const ALICE_AMOUNT = 25n;
 const BOB_AMOUNT = 40n;
