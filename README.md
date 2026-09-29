@@ -21,7 +21,8 @@ This is the **Private Payroll / Splits** pattern: distribute and pool funds with
 
 | Network | Address | Deploy Tx | Block |
 |---------|---------|-----------|-------|
-| Preprod (current) | `efa857e295dd4ea2d055f1c465b827d2afb87f4b5c7ae15dcbb5308e35eef379` | `002f061c9366ef8a5c26d7b250fe1ec589cdbf71e999b2ba377e1fb03c3822a2ad` | *(awaiting block)* |
+| Preprod (50 slots, active) | `efa857e295dd4ea2d055f1c465b827d2afb87f4b5c7ae15dcbb5308e35eef379` | `002f061c9366ef8a5c26d7b250fe1ec589cdbf71e999b2ba377e1fb03c3822a2ad` | *(awaiting block)* |
+| Preprod (3 slots, test) | `1b797f63670c171ed0a3e03b61ed0253e1b89adb4f6e64493ba745df6355f706` | `005c483ed25bac026d5aa43db0592afd09bdb8f4f07a3ac44908c1c1752a1b7dae` | *(awaiting block)* |
 | Preprod (original, full) | `b6709e66086cfa77d4bd88b1b918d03e1c1dde2c4584cc4dda005389a95914a9` | `00f5ae4fcb7f063f9498d04a117a6f440849bbda94f63fa7c09ca6ddb875e001de` | 2,573,582 |
 
 ## Live Demo
