@@ -11,7 +11,7 @@ import { Contract, type Ledger } from '../../managed/hushpot/contract/index.js';
 
 /** The deployed HushPot contract on Preprod (see README "Contract Address"). */
 export const HUSHPOT_ADDRESS =
-  'b6709e66086cfa77d4bd88b1b918d03e1c1dde2c4584cc4dda005389a95914a9';
+  'efa857e295dd4ea2d055f1c465b827d2afb87f4b5c7ae15dcbb5308e35eef379';
 
 /** Target network for the dapp. */
 export const TARGET_NETWORK_ID = 'preprod' as const;
