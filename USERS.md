@@ -17,4 +17,5 @@ Verified Preprod wallet addresses from users who tested HushPot on Midnight test
 
 | # | Wallet Address | Date | Source | Feedback |
 |---|---|---|---|---|
-| 1 | *(host / deployer)* | 2026-09-16 | Direct | Host account |
+| 1 | Blingz Kim | 2026-09-29 | X/Twitter | "The privacy — my pledge amount stays hidden on-chain" · ⭐⭐⭐⭐ · Would recommend |
+| 2 | *(host / deployer)* | 2026-09-16 | Direct | Host account |

@@ -106,14 +106,14 @@ HushPot is collecting Preprod user feedback via a public [Google Form](https://f
 
 | # | Name | Email | Wallet Address | Feedback Summary |
 |---|---|---|---|---|
-| 1 | *(Host / Deployer)* | ubongnt@gmail.com | *(deployer wallet)* | Host account |
-| *(Awaiting 50 Preprod users — form active, recruiting via X, WhatsApp, Discord)* | | | | |
+| 1 | Blingz Kim | blingzkim@gmail.com | `mn_addr_preprod1hvk63flc9y49v2ufahz2989zk8vprgnnd3c4ru463ef7t2usk7eq7pw2t5` | ⭐⭐⭐⭐ · Privacy core works great · Wants pledge history dashboard · Would recommend |
+| 2 | *(Host / Deployer)* | ubongnt@gmail.com | *(deployer wallet)* | Host account |
 
 ### Feedback Implementation
 
 | # | Name | Feedback Summary | Improvement Made | Commit |
 |---|---|---|---|---|
-| *(Awaiting first feedback cycle — changes will be linked to specific commits)* | | | | |
+| 1 | Blingz Kim | Add pledge history dashboard + clearer status indicators during prove step | *(Planned — see Improvement Summary below)* | — |
 
 ### Improvement Summary
 
