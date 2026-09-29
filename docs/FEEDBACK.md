@@ -51,6 +51,7 @@ This document tracks user feedback collected via the [Google Form](https://forms
 
 | Feedback | Improvement | Commit | Date |
 |---|---|---|---|
+| Join/pledge state lost on refresh (Blingz Kim, Test App) | Persist join/pledge state in sessionStorage — survives page refresh | [38527e3](https://github.com/ubongn/hushpot-app/commit/38527e3) | 2026-09-29 |
 | Pledge history dashboard (Blingz Kim) | *(Planned)* | — | — |
 | Clearer status indicators during prove (Blingz Kim) | *(Planned)* | — | — |
 | Pot deadline notifications (Test App) | *(Planned)* | — | — |

@@ -114,7 +114,7 @@ HushPot is collecting Preprod user feedback via a public [Google Form](https://f
 
 | # | Name | Feedback Summary | Improvement Made | Commit |
 |---|---|---|---|---|
-| 1 | Blingz Kim | Add pledge history dashboard + clearer status indicators during prove step | *(Planned — see Improvement Summary below)* | — |
+| 1 | Blingz Kim | Add pledge history dashboard + clearer status indicators during prove step | Persist join/pledge state in sessionStorage — survives page refresh | [38527e3](https://github.com/ubongn/hushpot-app/commit/38527e3) |
 | 2 | Test App | Notifications for pot deadlines + multi-pot support + live pot balance tracker | *(Planned — see Improvement Summary below)* | — |
 
 ### Improvement Summary
@@ -123,7 +123,8 @@ HushPot is collecting Preprod user feedback via a public [Google Form](https://f
 
 | Feedback Theme | Improvement | Commit | Date |
 |---|---|---|---|
-| *(Awaiting user feedback — changes will be documented here with commit links)* | | | |
+| Join/pledge state lost on refresh | Persist state in sessionStorage — survives page refresh | [38527e3](https://github.com/ubongn/hushpot-app/commit/38527e3) | 2026-09-29 |
+| *(Awaiting more feedback)* | | | |
 
 ## License
 
